@@ -1,3 +1,27 @@
+/*
+
+====Fight to Relax====
+
+Fight to Relax is a set of prototype tangible input devices designed to play the game ‘A Blind Legend’, created by Dowino.
+
+This code is designed to be run on an Arduino Pro Micro for its USB HID support.
+
+This is the companion to the walking-code Arduino - this Arduino code is for all the discrete sensors: heart, shield, sword-hilt, and sword direction.
+
+Other than the two left/right paddles which use a Digital Pin to read when values go low, all the other Inputs are Analog, and read the resulting values from voltage dividers.
+
+The mechanics of the game are such that only one button is pressed at a time, so I was able to use just a long sequence of IF statements, which read the sensors, set a variable which holds which key to press. This is followed by a switch-case that takes the key-variable and then sends the corresponding keyboard command (with different timings based on how the game would interpret it).
+
+Author: Mark Altosaar
+https://github.com/MarkErik/fight-to-relax
+
+Incorporates Libraries:
+- Adruino Keyboard library
+
+Used the built-in Keyboard tutorial as the starting point. (Heavily modified)
+
+*/
+
 #include "Keyboard.h"
 
 // set up variables to hold the pin numbers

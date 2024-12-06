@@ -1,3 +1,26 @@
+/*
+
+====Fight to Relax====
+
+Fight to Relax is a set of prototype tangible input devices designed to play the game ‘A Blind Legend’, created by Dowino.
+
+This code is deisgned to run on an Arduino Pro Micro (for its USB HID support) and interpret the timing of two button presses (foot pedals) and map them as either a walk or run command in the game. (Up Arrow for Walk, Up Arrow + Left Shift for Run).
+
+The code looks at time between successive "steps" (presses of the foot pedals), to either trigger a keyboard event for movement, or timeout and reset the logic.
+
+The user can start their walk/run beginning with either the left or right foot.
+
+
+Author: Mark Altosaar
+https://github.com/MarkErik/fight-to-relax
+
+Incorporates Libraries:
+- Adruino Keyboard library
+
+Used the built-in Keyboard tutorial as the starting point. (Heavily modified)
+
+*/
+
 #include "Keyboard.h"
 
 // variables to hold sensor pins on the arduino
